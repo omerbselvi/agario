@@ -16,7 +16,7 @@ import java.text.DecimalFormat;
 import java.util.concurrent.TimeUnit;
 import javax.swing.*;
 
-public class DisplayGame extends JPanel implements ActionListener,KeyListener{
+public class DisplayGame extends JPanel implements ActionListener{
 	private Rectangle outerArea;
 	public static int WIDTH=840;
 	public static int HEIGHT=680;
@@ -44,7 +44,6 @@ public class DisplayGame extends JPanel implements ActionListener,KeyListener{
 		menu= new Menu(this);
 		time=System.nanoTime();
 		addMouseListener(menu);
-		addKeyListener(this);
 		setFocusable(true);
 		requestFocusInWindow();
 		player1= new Players();
@@ -56,24 +55,6 @@ public class DisplayGame extends JPanel implements ActionListener,KeyListener{
 		setPreferredSize(newSize);
 		timer.start();
 	}	
-	@Override
-	public void keyPressed(KeyEvent e) {
-		System.out.println("THIS DOESNT WORK");
-		if(e.getKeyCode()==KeyEvent.VK_RIGHT){
-			player1.moveRight();
-			repaint();
-		}
-	}
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
 	public void setvPort(JViewport vPort) {
 		this.vPort = vPort;
 	}
