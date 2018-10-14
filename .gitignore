@@ -1,5 +1,4 @@
-/Camera.class
-/DisplayGame.class
+*.class
 /main.class
 /.gitattributes
 /.classpath
