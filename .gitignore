@@ -4,3 +4,7 @@
 /.gitattributes
 /.classpath
 /.project
+.idea/
+AgarIO.iml
+out/
+.DS_Store
